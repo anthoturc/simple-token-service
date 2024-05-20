@@ -1,0 +1,21 @@
+{{template "header" .}}
+<div class="py-12 flex justify-center">
+  <div class="px-8 py-8 bg-white rounded shadow">
+    <h1 class="pt-4 pb-8 text-center text-3xl font-bold text-gray-900">
+      Generate an API Token
+    </h1>
+    <h2 class="pb-8 text-center text-gray-900">All bytes are hand selected by random people!</h2>
+    <form action="/token" method="post">
+      <div class="hidden">
+        {{csrfField}}
+      </div>
+      <div class="py-4">
+        <button class="w-full py-2 px-2 bg-indigo-600 hover:bg-indigo-700
+          text-white rounded font-bold text-lg">
+          Get a Token
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{{template "footer" .}}
